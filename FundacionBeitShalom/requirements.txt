@@ -1,0 +1,5 @@
+Flask
+pyodbc
+python-dotenv
+Flask-WTF
+openpyxl

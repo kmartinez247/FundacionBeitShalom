@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block titulo %}Política de privacidad | Fundación Beit Shalom{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="container">
+        <h2 class="page-header__title">Política de privacidad</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Privacidad</span></li>
+        </ul>
+    </div>
+</section>
+<section class="colab-section">
+    <div class="container">
+        <div class="colab-card">
+            <h3 class="colab-card__title">¿Qué datos recopilamos?</h3>
+            <p>Tu nombre, país, correo, teléfono, las áreas en las que deseas colaborar, tu
+               disponibilidad y el texto que escribas sobre tu motivación.</p>
+            <h3 class="colab-card__title">¿Para qué los usamos?</h3>
+            <p>Solo para evaluar tu solicitud y contactarte. No vendemos ni compartimos tus datos.</p>
+            <h3 class="colab-card__title">¿Quién puede verlos?</h3>
+            <p>Únicamente el personal autorizado de la Fundación, mediante un acceso con usuario y contraseña.</p>
+            <h3 class="colab-card__title">¿Por cuánto tiempo?</h3>
+            <p>Mientras tu solicitud esté en evaluación o vigente. Puedes pedir que corrijamos
+               o eliminemos tus datos en cualquier momento.</p>
+            <h3 class="colab-card__title">Importante</h3>
+            <p>Registrarte como colaborador no te autoriza automáticamente a trabajar con niños.
+               Esa verificación es un proceso aparte.</p>
+            <p><small>Texto de ejemplo del proyecto: la Fundación debe revisarlo antes de publicarlo.</small></p>
+            <a class="kidearn-btn" href="{{ url_for('colaborador.registrar') }}"><span>Volver al formulario</span></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "admin/base_admin.html" %}
+{% block titulo %}Iniciar sesión{% endblock %}
+{% block content %}
+<section class="login">
+    <h1>Panel de colaboradores</h1>
+    <p>Acceso solo para el personal autorizado de la Fundación.</p>
+    <form method="post" action="{{ url_for('admin.login') }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <label for="usuario">Usuario</label>
+        <input type="text" id="usuario" name="usuario" required maxlength="50"
+               autocomplete="username" autofocus>
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" name="password" required
+               autocomplete="current-password">
+        <button type="submit" class="btn btn-principal">Entrar</button>
+    </form>
+</section>
+{% endblock %}

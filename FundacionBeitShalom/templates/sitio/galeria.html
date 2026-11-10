@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+{% block titulo %}Galería | Fundación Beit Shalom{% endblock %}
+{% block descripcion %}Fotografías de las actividades de la Fundación Beit Shalom.{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <h2 class="page-header__title">Galería</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Galería</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+
+<section class="gallery-one gallery-one--page">
+	<div class="container">
+		<div class="text-center">
+			<ul class="list-unstyled post-filter gallery-one__filter__list">
+				<li class="active" data-filter=".filter-item"><span>Todos</span></li>
+				<li data-filter=".el-salvador"><span>El Salvador</span></li>
+				<li data-filter=".colombia"><span>Colombia</span></li>
+			</ul><!-- /.list-unstyledf -->
+		</div><!-- /.text-center -->
+		<div class="row masonry-layout filter-layout">
+			<div class="col-md-6 col-lg-4 filter-item el-salvador">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-1.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-1.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item colombia">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-2.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-2.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item el-salvador">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-3.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-3.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item colombia">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-4.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-4.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item el-salvador">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-5.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-5.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item colombia">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-6.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-6.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item el-salvador">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-7.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-7.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item colombia">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-8.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-8.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+			<div class="col-md-6 col-lg-4 filter-item el-salvador">
+				<div class="gallery-one__card">
+					<img src="/static/images/beit-shalom/gal-9.jpg" alt="Actividades de la Fundación Beit Shalom">
+					<div class="gallery-one__card__hover">
+						<a href="/static/images/beit-shalom/full/gal-9.jpg" class="img-popup">
+							<span class="gallery-one__card__icon"></span>
+						</a>
+					</div><!-- /.gallery-one__card__hover -->
+				</div><!-- /.gallery-one__card -->
+			</div><!-- /.col-md-6 col-lg-4 -->
+		</div><!-- /.row -->
+	</div><!-- /.container-fluid -->
+</section><!-- /.gallery-one -->
+{% endblock %}

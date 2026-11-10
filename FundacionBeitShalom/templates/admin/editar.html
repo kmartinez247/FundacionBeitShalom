@@ -1,0 +1,60 @@
+{% extends "admin/base_admin.html" %}
+{% block titulo %}Editar datos{% endblock %}
+{% block content %}
+<a class="volver" href="{{ url_for('admin.detalle', colaborador_id=c.id) }}">Volver al detalle</a>
+<h1>Editar datos</h1>
+
+<form method="post" action="{{ url_for('admin.editar', colaborador_id=c.id) }}" class="bloque formulario">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <label for="nombre">Nombre completo</label>
+    <input type="text" id="nombre" name="nombre" value="{{ c.nombre_completo }}"
+           required minlength="5" maxlength="150">
+
+    <label for="pais">País de residencia</label>
+    <select id="pais" name="pais" required>
+        <option value="">Seleccionar país</option>
+        {% for p in paises %}
+        <option value="{{ p }}" {% if p == c.pais %}selected{% endif %}>{{ p }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="correo">Correo electrónico</label>
+    <input type="email" id="correo" name="correo" value="{{ c.correo }}" required maxlength="150">
+
+    <label for="telefono">Teléfono / WhatsApp</label>
+    <input type="tel" id="telefono" name="telefono" value="{{ c.telefono or '' }}" maxlength="30">
+
+    <label>Áreas de colaboración</label>
+    <div class="opciones">
+        {% for a in areas %}
+        <label>
+            <input type="checkbox" name="areas" value="{{ a.id }}" {% if a.id in c.area_ids %}checked{% endif %}>
+            {{ a.nombre }}
+        </label>
+        {% endfor %}
+    </div>
+
+    <label for="modalidad">Modalidad</label>
+    <select id="modalidad" name="modalidad" required>
+        {% for m in modalidades %}
+        <option value="{{ m }}" {% if m == c.modalidad %}selected{% endif %}>{{ m }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="disponibilidad">Disponibilidad</label>
+    <select id="disponibilidad" name="disponibilidad" required>
+        {% for d in disponibilidades %}
+        <option value="{{ d }}" {% if d == c.disponibilidad %}selected{% endif %}>{{ d }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="motivacion">Motivación</label>
+    <textarea id="motivacion" name="motivacion" rows="5" maxlength="1000">{{ c.motivacion or '' }}</textarea>
+
+    <div class="acciones separado">
+        <button type="submit" class="btn btn-principal">Guardar cambios</button>
+        <a class="btn" href="{{ url_for('admin.detalle', colaborador_id=c.id) }}">Cancelar</a>
+    </div>
+</form>
+{% endblock %}

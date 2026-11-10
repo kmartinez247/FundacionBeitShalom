@@ -1,0 +1,96 @@
+{% extends "base.html" %}
+{% block titulo %}Contacto | Fundación Beit Shalom{% endblock %}
+{% block descripcion %}Contacta a la Fundación Beit Shalom: donaciones, voluntariado e información.{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <h2 class="page-header__title">Contacto</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Contacto</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="contact-one">
+	<div class="container">
+		<div class="sec-title text-center">
+	
+	<h6 class="sec-title__tagline">Contáctanos</h6><!-- /.sec-title__tagline -->
+	
+	<h3 class="sec-title__title">Escríbenos, con gusto<br> te atenderemos</h3><!-- /.sec-title__title -->
+</div><!-- /.sec-title -->
+		<form class="contact-one__form contact-form-validated form-one" action="inc/sendemail.php">
+			<div class="form-one__group">
+				<div class="form-one__control ">
+					<input type="text" name="name" placeholder="Tu nombre">
+				</div><!-- /.form-one__control  -->
+				<div class="form-one__control ">
+					<input type="email" name="email" placeholder="Correo electrónico">
+				</div><!-- /.form-one__control  -->
+				<div class="form-one__control ">
+					<input type="text" name="phone" placeholder="Teléfono">
+				</div><!-- /.form-one__control  -->
+				<div class="form-one__control ">
+					<div class="form-one__control__select">
+						<label class="sr-only" for="language-select">Motivo del mensaje</label>
+						<!-- /#language-select.sr-only -->
+						<select class="selectpicker" id="language-select">
+<option value="Motivo de tu mensaje">Motivo de tu mensaje</option>
+<option value="Quiero donar">Quiero donar</option>
+<option value="Quiero ser voluntario">Quiero ser voluntario</option>
+<option value="Información sobre programas">Información sobre programas</option>
+<option value="Otro">Otro</option>
+</select>
+					</div><!-- /.main-menu__language -->
+
+				</div><!-- /.form-one__control  -->
+				<div class="form-one__control form-one__control--full">
+					<textarea name="message" placeholder="Escribe tu mensaje"></textarea><!-- /# -->
+				</div><!-- /.form-one__control -->
+				<div class="form-one__control form-one__control--full text-center">
+					<button type="submit" class="kidearn-btn kidearn-btn--xl"><span>Enviar mensaje</span></button>
+				</div><!-- /.form-one__control -->
+			</div><!-- /.form-one__group -->
+		</form>
+	</div><!-- /.container -->
+</section><!-- /.contact-one -->
+
+<section class="contact-info-one">
+	<div class="container">
+		<div class="contact-info-one__inner">
+			<div class="row">
+				<div class="col-md-12 col-lg-4">
+					<div class="contact-info-one__item">
+						<i class="icon-telephone contact-info-one__icon"></i>
+						<p class="contact-info-one__text">¿Tienes preguntas?</p>
+						<h3 class="contact-info-one__title">
+							<a href="https://wa.me/50300000000">+503 0000-0000</a>
+						</h3><!-- /.contact-info-one__title -->
+					</div><!-- /.contact-info-one__item -->
+				</div><!-- /.col-md-12 -->
+				<div class="col-md-12 col-lg-4">
+					<div class="contact-info-one__item" style="--accent-color: #2390FF;">
+						<i class="icon-email contact-info-one__icon"></i>
+						<p class="contact-info-one__text">Escríbenos</p>
+						<h3 class="contact-info-one__title">
+							<a href="mailto:info@fundacionbeitshalom.org">info@fundacionbeitshalom.org</a>
+						</h3><!-- /.contact-info-one__title -->
+					</div><!-- /.contact-info-one__item -->
+				</div><!-- /.col-md-12 -->
+				<div class="col-md-12 col-lg-4">
+					<div class="contact-info-one__item" style="--accent-color: #75C137;">
+						<i class="icon-location-fill contact-info-one__icon"></i>
+						<p class="contact-info-one__text">Visítanos</p>
+						<h3 class="contact-info-one__title">
+							<a href="{{ url_for('sitio.contacto') }}">San Salvador, El Salvador</a>
+						</h3><!-- /.contact-info-one__title -->
+					</div><!-- /.contact-info-one__item -->
+				</div><!-- /.col-md-12 -->
+			</div><!-- /.row -->
+		</div><!-- /.contact-info-one__inner -->
+	</div><!-- /.container -->
+</section><!-- /.contact-info-one -->
+{% endblock %}

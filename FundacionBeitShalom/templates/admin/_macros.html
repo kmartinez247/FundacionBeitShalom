@@ -1,0 +1,4 @@
+{% macro badge(estado) -%}
+{%- set clases = {'Pendiente': 'pendiente', 'En revisión': 'revision', 'Aprobado': 'aprobado', 'Rechazado': 'rechazado'} -%}
+<span class="estado estado-{{ clases.get(estado, 'pendiente') }}">{{ estado }}</span>
+{%- endmacro %}

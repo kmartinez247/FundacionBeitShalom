@@ -1,0 +1,493 @@
+{% extends "base.html" %}
+{% block titulo %}Fundación Beit Shalom{% endblock %}
+{% block content %}
+<!--Hero Banner Start-->
+<section class="banner-one">
+	<div class="banner-one__carousel kidearn-owl__carousel owl-carousel kidearn-owl__carousel--with-shadow" data-owl-options='{
+		"loop": true,
+		"animateOut": "fadeOut",
+		"animateIn": "fadeInUp",
+		"items": 1,
+		"autoplay": true,
+		"autoplayTimeout": 7000,
+		"smartSpeed": 1000,
+		"nav": false,
+        "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"],
+		"dots": true,
+		"margin": 0
+	    }'>
+		<div class="item">
+			<div class="banner-one__item">
+				<div class="banner-one__bg" style="background-image: url(/static/images/beit-shalom/hero-1.jpg);"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="banner-one__content">
+								<div class="banner-one__shape2"></div>
+								<div class="banner-one__shape3"></div>
+								<div class="banner-one__shape4">
+									<img src="/static/images/shapes/banner-1-shape-2.png" alt="Fundación Beit Shalom"/>
+								</div>
+								<div class="banner-one__shape5"><div class="banner-one__shape5-inner"></div>
+								</div>
+								<div class="banner-one__shape6"><div class="banner-one__shape6-inner"></div>
+								</div>
+								<div class="banner-one__content__bg"></div>
+								<h2 class="banner-one__content__title">Descubre y potencia<br> los talentos<br> de la niñez</h2>
+								<a href="{{ url_for('sitio.nosotros') }}" class="kidearn-btn">
+<span>Conoce la Fundación</span>
+								</a>
+								<div class="banner-one__shape1 kidearn-splax" style="background-image: url(/static/images/shapes/banner-1-shape-1.png);" data-para-options='{
+									"orientation": "down",
+									"scale": 1.9,
+									"overflow": true
+									}'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- slider-item -->
+		<div class="item">
+			<div class="banner-one__item">
+				<div class="banner-one__bg" style="background-image: url(/static/images/beit-shalom/hero-2.jpg);"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="banner-one__content">
+								<div class="banner-one__shape2"></div>
+								<div class="banner-one__shape3"></div>
+								<div class="banner-one__shape4">
+									<img src="/static/images/shapes/banner-1-shape-2.png" alt="Fundación Beit Shalom"/>
+								</div>
+								<div class="banner-one__shape5"><div class="banner-one__shape5-inner"></div>
+								</div>
+								<div class="banner-one__shape6"><div class="banner-one__shape6-inner"></div>
+								</div>
+								<div class="banner-one__content__bg"></div>
+								<h2 class="banner-one__content__title">Valores, fe y<br> formación integral<br> para crecer</h2>
+								<a href="{{ url_for('sitio.programas') }}" class="kidearn-btn">
+<span>Nuestros programas</span>
+								</a>
+								<div class="banner-one__shape1 kidearn-splax" style="background-image: url(/static/images/shapes/banner-1-shape-1.png);" data-para-options='{
+									"orientation": "down",
+									"scale": 1.9,
+									"overflow": true
+									}'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- slider-item -->
+		<div class="item">
+			<div class="banner-one__item">
+				<div class="banner-one__bg" style="background-image: url(/static/images/beit-shalom/hero-3.jpg);"></div>
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="banner-one__content">
+								<div class="banner-one__shape2"></div>
+								<div class="banner-one__shape3"></div>
+								<div class="banner-one__shape4">
+									<img src="/static/images/shapes/banner-1-shape-2.png" alt="Fundación Beit Shalom"/>
+								</div>
+								<div class="banner-one__shape5"><div class="banner-one__shape5-inner"></div>
+								</div>
+								<div class="banner-one__shape6"><div class="banner-one__shape6-inner"></div>
+								</div>
+								<div class="banner-one__content__bg"></div>
+								<h2 class="banner-one__content__title">Juntos construimos<br> esperanza para<br> los niños</h2>
+								<a href="{{ url_for('sitio.contacto') }}" class="kidearn-btn">
+<span>Apóyanos</span>
+								</a>
+								<div class="banner-one__shape1 kidearn-splax" style="background-image: url(/static/images/shapes/banner-1-shape-1.png);" data-para-options='{
+									"orientation": "down",
+									"scale": 1.9,
+									"overflow": true
+									}'>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- slider-item -->
+	</div>
+</section>
+<section class="service-one">
+	<div class="service-one__bg kidearn-splax" data-para-options='{
+		"orientation": "up",
+		"scale": 1.5,
+		"overflow": true
+		}'>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 907 1117">
+			<path d="M439.501 191.327C423.886 151.14 410.535 109.849 382.57 77.9193C364.573 57.2762 341.374 41.7837 316.691 29.9082C236.778 -8.54921 138.559 -8.863 55.8975 29.1363C-51.0518 78.3338 -92.2344 163.545 -124.062 267.647C-143.11 329.787 -172.464 389.023 -210.558 442.132C-241.37 485.071 -277.675 523.792 -309.262 566.153C-385.567 668.623 -459.365 778.565 -447.139 909.755C-441 975.319 -411.153 1039.68 -358.421 1077.45C-302.12 1117.73 -226.363 1123.79 -157.143 1109.58C-80.7379 1093.81 -14.8795 1049.94 58.6369 1028.82C138.638 1005.83 219.542 986.431 302.449 984.77C375.471 983.366 447.609 995.327 520.506 996.491C607.015 997.912 707.478 996.781 778.299 938.335C866.23 865.769 917.15 748.337 904.558 637.081C892.88 533.28 826.934 445.335 735.138 400.543C640.645 354.434 520.235 343.915 463.394 243.984C453.944 227.261 446.473 209.395 439.501 191.327Z"/>
+		</svg>
+	</div>
+	<div class="service-one__shape kidearn-splax" style="background-image: url(/static/images/shapes/about-bg-shape-1.png);" data-para-options='{
+		"orientation": "left",
+		"scale": 1.5,
+		"overflow": true
+		}'></div>
+	<div class="container">
+		<div class="row gutter-y-30">
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+				<div class="service-one__item" style="--accent-color: #75C137;">
+					<div class="service-one__item__image-wrapper">
+						<div class="service-one__item__image kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+							<img src="/static/images/beit-shalom/service-1-1.jpg" alt="Fundación Beit Shalom"/>
+						</div>
+						<div class="service-one__item__ball"></div>
+					</div>
+					<h4 class="service-one__item__title">Formación en valores</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+				<div class="service-one__item service-one__item--order" style="--accent-color: #26A6A1;">
+					<div class="service-one__item__image-wrapper">
+						<div class="service-one__item__image kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+							<img src="/static/images/beit-shalom/service-1-2.jpg" alt="Fundación Beit Shalom"/>
+						</div>
+						<div class="service-one__item__ball"></div>
+					</div>
+					<h4 class="service-one__item__title">Fe y espiritualidad</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+				<div class="service-one__item" style="--accent-color: #F25334;">
+					<div class="service-one__item__image-wrapper">
+						<div class="service-one__item__image kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+							<img src="/static/images/beit-shalom/service-1-3.jpg" alt="Fundación Beit Shalom"/>
+						</div>
+						<div class="service-one__item__ball"></div>
+					</div>
+					<h4 class="service-one__item__title">Refuerzo académico</h4>
+				</div>
+			</div><!-- /.service-item -->
+			<div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+				<div class="service-one__item service-one__item--order" style="--accent-color: #FFAA23;">
+					<div class="service-one__item__image-wrapper">
+						<div class="service-one__item__image kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 7, "speed": 700, "scale": 1 }'>
+							<img src="/static/images/beit-shalom/service-1-4.jpg" alt="Fundación Beit Shalom"/>
+						</div>
+						<div class="service-one__item__ball"></div>
+					</div>
+					<h4 class="service-one__item__title">Talentos y cultura</h4>
+				</div>
+			</div><!-- /.service-item -->
+		</div>
+	</div>
+</section>
+<section class="about-one">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 wow fadeInLeft" data-wow-delay="200ms">
+				<div class="about-one__content">
+					<div class="sec-title text-left">
+	
+	<h6 class="sec-title__tagline">Quiénes somos</h6><!-- /.sec-title__tagline -->
+	
+	<h3 class="sec-title__title">Una fundación al servicio<br> de la niñez</h3><!-- /.sec-title__title -->
+</div><!-- /.sec-title -->
+					<p class="about-one__content__text">Somos una fundación sin ánimo de lucro que trabaja por la formación de niños y niñas de comunidades vulnerables, ayudándolos a descubrir y potenciar sus talentos para alcanzar metas de superación.</p>
+					<a href="{{ url_for('sitio.nosotros') }}" class="kidearn-btn">
+						<span>Conoce más</span>
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-6">
+				<div class="about-one__image">
+					<div class="about-one__image__one kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 5, "speed": 700, "scale": 1 }'>
+						<img src="/static/images/beit-shalom/about-1-1.jpg" alt="Fundación Beit Shalom"/>
+					</div>
+					<div class="about-one__image__border wow fadeInUp" data-wow-delay="200ms">
+						<img src="/static/images/shapes/about-1-border.jpg" alt="Fundación Beit Shalom"/>
+					</div>
+					<div class="about-one__image__leaf kidearn-splax" data-para-options='{
+						"orientation": "left",
+						"scale": 1.5,
+						"overflow": true
+						}'>
+						<img src="/static/images/shapes/about-1-leaf.png" alt="Fundación Beit Shalom"/>
+					</div>
+					<div class="about-one__image__ball wow fadeInUp" data-wow-delay="100ms"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="program-one">
+	<div class="program-one__bg kidearn-splax" data-para-options='{
+		"orientation": "up",
+		"scale": 2.5,
+		"overflow": true
+		}'>
+		<img src="/static/images/shapes/program-bg-shape.png" alt="Fundación Beit Shalom"/>
+	</div>
+	<div class="container">
+		<div class="sec-title text-center">
+	
+	<h6 class="sec-title__tagline">Nuestros programas</h6><!-- /.sec-title__tagline -->
+	
+	<h3 class="sec-title__title">Formación integral para<br> cada niño y niña</h3><!-- /.sec-title__title -->
+</div><!-- /.sec-title -->
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="program-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms' style='--accent-color: #F25334;'>
+    <div class="program-one__item__shape">
+        <svg class="program-one__item__shape-one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 43">
+            <path d="M11.0817 6.98831C-9.7901 23.3302 2.35379 52.1177 18.5511 39.5735C34.7647 27.0458 39.1287 -14.9434 11.0817 6.98831Z"/>
+        </svg>
+        <svg class="program-one__item__shape-two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 21">
+            <path d="M5.28824 3.20713C-4.67276 11.0063 1.12287 24.745 8.85298 18.7583C16.5909 12.7795 18.6736 -7.25972 5.28824 3.20713Z"/>
+        </svg>
+    </div>
+    <div class="program-one__item__bg"></div>
+    <div class="program-one__item__image">
+        <img src="/static/images/beit-shalom/program-1-1.jpg" alt="Formación en valores">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-one__item__content">
+        <h3 class="program-one__item__title"><a href="{{ url_for('sitio.programas') }}">Formación en valores</a></h3><!-- /.program-one__item__title -->
+        <div class="program-one__item__age">(Niños y niñas)</div><!-- /.program-one__item__age -->
+        <p class="program-one__item__text">Honestidad, respeto, responsabilidad, servicio y solidaridad para crecer como personas íntegras.</p><!-- /.program-one__item__text -->
+        <a class="program-one__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-one__item__text -->
+    </div><!-- /.program-one__item__content -->
+</div><!-- /.program-one__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-3 col-md-6">
+				<div class="program-one__item program-one__item--order wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms' style='--accent-color: #75C137;'>
+    <div class="program-one__item__shape">
+        <svg class="program-one__item__shape-one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 43">
+            <path d="M11.0817 6.98831C-9.7901 23.3302 2.35379 52.1177 18.5511 39.5735C34.7647 27.0458 39.1287 -14.9434 11.0817 6.98831Z"/>
+        </svg>
+        <svg class="program-one__item__shape-two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 21">
+            <path d="M5.28824 3.20713C-4.67276 11.0063 1.12287 24.745 8.85298 18.7583C16.5909 12.7795 18.6736 -7.25972 5.28824 3.20713Z"/>
+        </svg>
+    </div>
+    <div class="program-one__item__bg"></div>
+    <div class="program-one__item__image">
+        <img src="/static/images/beit-shalom/program-1-2.jpg" alt="Formación espiritual">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-one__item__content">
+        <h3 class="program-one__item__title"><a href="{{ url_for('sitio.programas') }}">Formación espiritual</a></h3><!-- /.program-one__item__title -->
+        <div class="program-one__item__age">(Niños y niñas)</div><!-- /.program-one__item__age -->
+        <p class="program-one__item__text">Sólida doctrina en la fe cristiana y lectura comprensiva de la Palabra de Dios.</p><!-- /.program-one__item__text -->
+        <a class="program-one__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-one__item__text -->
+    </div><!-- /.program-one__item__content -->
+</div><!-- /.program-one__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-3 col-md-6">
+				<div class="program-one__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms' style='--accent-color: #2390FF;'>
+    <div class="program-one__item__shape">
+        <svg class="program-one__item__shape-one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 43">
+            <path d="M11.0817 6.98831C-9.7901 23.3302 2.35379 52.1177 18.5511 39.5735C34.7647 27.0458 39.1287 -14.9434 11.0817 6.98831Z"/>
+        </svg>
+        <svg class="program-one__item__shape-two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 21">
+            <path d="M5.28824 3.20713C-4.67276 11.0063 1.12287 24.745 8.85298 18.7583C16.5909 12.7795 18.6736 -7.25972 5.28824 3.20713Z"/>
+        </svg>
+    </div>
+    <div class="program-one__item__bg"></div>
+    <div class="program-one__item__image">
+        <img src="/static/images/beit-shalom/program-1-3.jpg" alt="Refuerzo académico">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-one__item__content">
+        <h3 class="program-one__item__title"><a href="{{ url_for('sitio.programas') }}">Refuerzo académico</a></h3><!-- /.program-one__item__title -->
+        <div class="program-one__item__age">(Niños y niñas)</div><!-- /.program-one__item__age -->
+        <p class="program-one__item__text">Intensificación académica semanal que complementa lo aprendido en el colegio.</p><!-- /.program-one__item__text -->
+        <a class="program-one__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-one__item__text -->
+    </div><!-- /.program-one__item__content -->
+</div><!-- /.program-one__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-3 col-md-6">
+				<div class="program-one__item program-one__item--order wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms' style='--accent-color: #FFAA23;'>
+    <div class="program-one__item__shape">
+        <svg class="program-one__item__shape-one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 43">
+            <path d="M11.0817 6.98831C-9.7901 23.3302 2.35379 52.1177 18.5511 39.5735C34.7647 27.0458 39.1287 -14.9434 11.0817 6.98831Z"/>
+        </svg>
+        <svg class="program-one__item__shape-two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 21">
+            <path d="M5.28824 3.20713C-4.67276 11.0063 1.12287 24.745 8.85298 18.7583C16.5909 12.7795 18.6736 -7.25972 5.28824 3.20713Z"/>
+        </svg>
+    </div>
+    <div class="program-one__item__bg"></div>
+    <div class="program-one__item__image">
+        <img src="/static/images/beit-shalom/program-1-4.jpg" alt="Talentos y cultura">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-one__item__content">
+        <h3 class="program-one__item__title"><a href="{{ url_for('sitio.programas') }}">Talentos y cultura</a></h3><!-- /.program-one__item__title -->
+        <div class="program-one__item__age">(Niños y niñas)</div><!-- /.program-one__item__age -->
+        <p class="program-one__item__text">Actividades artísticas y culturales para descubrir y potenciar los talentos de cada niño.</p><!-- /.program-one__item__text -->
+        <a class="program-one__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-one__item__text -->
+    </div><!-- /.program-one__item__content -->
+</div><!-- /.program-one__item__one -->
+			</div><!-- /.program-item -->
+		</div>
+	</div>
+</section>
+
+
+<section class="blog-three">
+	<div class="blog-three__shape-right kidearn-splax" data-para-options='{
+		"orientation": "right",
+		"scale": 3.5,
+		"overflow": true
+		}'>
+		<img src="/static/images/shapes/blog-3-shape-1.png" alt="Fundación Beit Shalom"/>
+	</div>
+	<div class="blog-three__shape-left kidearn-splax" data-para-options='{
+		"orientation": "left",
+		"scale": 3.5,
+		"overflow": true
+		}'>
+		<img src="/static/images/shapes/blog-3-shape-2.png" alt="Fundación Beit Shalom"/>
+	</div>
+	<div class="container">
+		<div class="sec-title text-center">
+	
+	<h6 class="sec-title__tagline">Noticias</h6><!-- /.sec-title__tagline -->
+	
+	<h3 class="sec-title__title">Novedades y actividades<br> de la Fundación</h3><!-- /.sec-title__title -->
+</div><!-- /.sec-title -->
+		<div class="blog-three__carousel kidearn-owl__carousel kidearn-owl__carousel--basic-nav owl-carousel owl-theme"
+			data-owl-options='{
+			"items": 1,
+			"margin": 0,
+			"loop": false,
+			"smartSpeed": 700,
+			"nav": false,
+			"navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+			"dots": true,
+			"autoplay": false,
+			"responsive": {
+				"0": {
+					"items": 1
+				},
+				"576": {
+					"items": 2,
+					"margin": 30
+				},
+				"992": {
+					"items": 3,
+					"margin": 30
+				}
+			}
+			}'>
+			<div class="item">
+				<div class="blog-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms' style='--accent-color: #F25334;'>
+    <div class="blog-card-three__bg"></div>
+    <div class="blog-card-three__image">
+        <img src="/static/images/beit-shalom/blog-3-1.jpg" alt="Convivio de fin de año con niños y niñas en El Salvador">
+        <div class="blog-card-three__image__layer-wrapper">
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-1.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-1.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-1.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-1.jpg);"></div>
+        </div>
+        <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__image__link"><span class="sr-only">Convivio de fin de año con niños y niñas en El Salvador</span><!-- /.sr-only --></a>
+    </div><!-- /.blog-card-three__image -->
+    <div class="blog-card-three__content">
+        <div class="blog-card-three__content__top">
+            <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__category">Fundación</a>
+            <div class="blog-card-three__date">13 Dic, 2025</div><!-- /.blog-card-three__date -->
+        </div><!-- /.blog-card-three__content__top -->
+        <h3 class="blog-card-three__title"><a href="{{ url_for('sitio.noticias') }}">Convivio de fin de año con niños y niñas en El Salvador</a></h3><!-- /.blog-card-three__title -->
+        <div class="blog-card-three__content__bottom">
+            <div class="blog-card-three__author">
+                <div class="blog-card-three__author__image">
+                    <img src="/static/images/beit-shalom/avatar.png" alt="Equipo Beit Shalom">
+                </div><!-- /.blog-card-three__author__image -->
+                <div class="blog-card-three__author__content">
+                    <h4 class="blog-card-three__author__name">Equipo Beit Shalom</h4><!-- /.blog-card-three__author__name -->
+                    <p class="blog-card-three__author__designation">Fundación</p><!-- /.blog-card-three__author__designation -->
+                </div><!-- /.blog-card-three__author__content -->
+            </div><!-- /.blog-card-three__author -->
+        </div><!-- /.blog-card-three__content__bottom -->
+    </div><!-- /.blog-card-three__content -->
+</div><!-- /.blog-card-three -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="blog-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms' style='--accent-color: #2390FF;'>
+    <div class="blog-card-three__bg"></div>
+    <div class="blog-card-three__image">
+        <img src="/static/images/beit-shalom/blog-3-2.jpg" alt="Niños de Colombia reciben sus reconocimientos">
+        <div class="blog-card-three__image__layer-wrapper">
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-2.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-2.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-2.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-2.jpg);"></div>
+        </div>
+        <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__image__link"><span class="sr-only">Niños de Colombia reciben sus reconocimientos</span><!-- /.sr-only --></a>
+    </div><!-- /.blog-card-three__image -->
+    <div class="blog-card-three__content">
+        <div class="blog-card-three__content__top">
+            <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__category">Comunidad</a>
+            <div class="blog-card-three__date">21 Jun, 2025</div><!-- /.blog-card-three__date -->
+        </div><!-- /.blog-card-three__content__top -->
+        <h3 class="blog-card-three__title"><a href="{{ url_for('sitio.noticias') }}">Niños de Colombia reciben sus reconocimientos</a></h3><!-- /.blog-card-three__title -->
+        <div class="blog-card-three__content__bottom">
+            <div class="blog-card-three__author">
+                <div class="blog-card-three__author__image">
+                    <img src="/static/images/beit-shalom/avatar.png" alt="Equipo Beit Shalom">
+                </div><!-- /.blog-card-three__author__image -->
+                <div class="blog-card-three__author__content">
+                    <h4 class="blog-card-three__author__name">Equipo Beit Shalom</h4><!-- /.blog-card-three__author__name -->
+                    <p class="blog-card-three__author__designation">Fundación</p><!-- /.blog-card-three__author__designation -->
+                </div><!-- /.blog-card-three__author__content -->
+            </div><!-- /.blog-card-three__author -->
+        </div><!-- /.blog-card-three__content__bottom -->
+    </div><!-- /.blog-card-three__content -->
+</div><!-- /.blog-card-three -->
+			</div><!-- /.item -->
+			<div class="item">
+				<div class="blog-card-three wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms' style='--accent-color: #75C137;'>
+    <div class="blog-card-three__bg"></div>
+    <div class="blog-card-three__image">
+        <img src="/static/images/beit-shalom/blog-3-3.jpg" alt="Jornada de integración con las familias en Colombia">
+        <div class="blog-card-three__image__layer-wrapper">
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-3.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-3.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-3.jpg);"></div>
+            <div class="blog-card-three__image__layer" style="background-image: url(/static/images/beit-shalom/blog-3-3.jpg);"></div>
+        </div>
+        <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__image__link"><span class="sr-only">Jornada de integración con las familias en Colombia</span><!-- /.sr-only --></a>
+    </div><!-- /.blog-card-three__image -->
+    <div class="blog-card-three__content">
+        <div class="blog-card-three__content__top">
+            <a href="{{ url_for('sitio.noticias') }}" class="blog-card-three__category">Formación</a>
+            <div class="blog-card-three__date">20 Sep, 2024</div><!-- /.blog-card-three__date -->
+        </div><!-- /.blog-card-three__content__top -->
+        <h3 class="blog-card-three__title"><a href="{{ url_for('sitio.noticias') }}">Jornada de integración con las familias en Colombia</a></h3><!-- /.blog-card-three__title -->
+        <div class="blog-card-three__content__bottom">
+            <div class="blog-card-three__author">
+                <div class="blog-card-three__author__image">
+                    <img src="/static/images/beit-shalom/avatar.png" alt="Equipo Beit Shalom">
+                </div><!-- /.blog-card-three__author__image -->
+                <div class="blog-card-three__author__content">
+                    <h4 class="blog-card-three__author__name">Equipo Beit Shalom</h4><!-- /.blog-card-three__author__name -->
+                    <p class="blog-card-three__author__designation">Fundación</p><!-- /.blog-card-three__author__designation -->
+                </div><!-- /.blog-card-three__author__content -->
+            </div><!-- /.blog-card-three__author -->
+        </div><!-- /.blog-card-three__content__bottom -->
+    </div><!-- /.blog-card-three__content -->
+</div><!-- /.blog-card-three -->
+			</div><!-- /.item -->
+		</div><!-- /.row -->
+	</div><!-- /.container -->
+</section><!-- /.blog-three -->
+
+<section class="colab-cta">
+    <div class="container">
+        <div class="colab-cta__inner">
+            <div>
+                <h3 class="colab-cta__title">Tu ayuda puede cambiar la vida de un niño</h3>
+                <p class="colab-cta__text">Súmate como voluntario, apoya con tu profesión o ayúdanos a gestionar recursos.</p>
+            </div>
+            <a href="{{ url_for('colaborador.registrar') }}" class="kidearn-btn kidearn-btn--xl"><span>Quiero colaborar</span></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

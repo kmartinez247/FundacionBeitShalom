@@ -1,0 +1,57 @@
+{% extends "admin/base_admin.html" %}
+{% from "admin/_macros.html" import badge %}
+{% block titulo %}{{ c.nombre_completo }}{% endblock %}
+{% block content %}
+<a class="volver" href="{{ url_for('admin.listado') }}">Volver al listado</a>
+<h1>{{ c.nombre_completo }} {{ badge(c.estado) }}</h1>
+
+<section class="bloque">
+    <h2>Datos de contacto</h2>
+    <dl class="datos">
+        <dt>Correo</dt><dd>{{ c.correo }}</dd>
+        <dt>Teléfono / WhatsApp</dt><dd>{{ c.telefono or 'No indicó' }}</dd>
+        <dt>País de residencia</dt><dd>{{ c.pais }}</dd>
+        <dt>Fecha de registro</dt><dd>{{ c.fecha_registro.strftime('%d/%m/%Y %H:%M') }}</dd>
+        <dt>Política de privacidad</dt><dd>{{ 'Aceptada' if c.acepta_privacidad else 'No aceptada' }}</dd>
+    </dl>
+</section>
+
+<section class="bloque">
+    <h2>Cómo quiere colaborar</h2>
+    <dl class="datos">
+        <dt>Áreas</dt>
+        <dd>{% if c.areas %}<ul class="lista-simple">{% for a in c.areas %}<li>{{ a }}</li>{% endfor %}</ul>{% else %}Sin áreas{% endif %}</dd>
+        <dt>Modalidad</dt><dd>{{ c.modalidad }}</dd>
+        <dt>Disponibilidad</dt><dd>{{ c.disponibilidad }}</dd>
+        <dt>Motivación</dt><dd class="texto-libre">{{ c.motivacion or 'No escribió nada.' }}</dd>
+    </dl>
+</section>
+
+<section class="bloque">
+    <h2>Estado de la solicitud</h2>
+    {% set etiquetas = {'Pendiente': 'Marcar como pendiente', 'En revisión': 'Pasar a revisión', 'Aprobado': 'Aprobar', 'Rechazado': 'Rechazar'} %}
+    <form method="post" action="{{ url_for('admin.cambiar_estado', colaborador_id=c.id) }}" class="acciones">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        {% for e in estados %}
+        <button type="submit" name="estado" value="{{ e }}"
+                class="btn {% if e == 'Aprobado' %}btn-ok{% elif e == 'Rechazado' %}btn-peligro{% endif %}"
+                {% if e == c.estado %}disabled{% endif %}
+                {% if e == 'Rechazado' %}onclick="return confirm('¿Rechazar esta solicitud?')"{% endif %}>
+            {{ etiquetas[e] }}
+        </button>
+        {% endfor %}
+    </form>
+</section>
+
+<section class="bloque">
+    <h2>Editar o eliminar</h2>
+    <div class="acciones">
+        <a class="btn btn-principal" href="{{ url_for('admin.editar', colaborador_id=c.id) }}">Editar datos</a>
+        <form method="post" action="{{ url_for('admin.eliminar', colaborador_id=c.id) }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-peligro"
+                    onclick="return confirm('¿Eliminar esta solicitud? No se puede deshacer.')">Eliminar solicitud</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

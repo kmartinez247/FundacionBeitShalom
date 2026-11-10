@@ -1,0 +1,185 @@
+{% extends "base.html" %}
+{% block titulo %}Nosotros | Fundación Beit Shalom{% endblock %}
+{% block descripcion %}Misión, visión, fines y objetivos de la Fundación International Beit Shalom, El Remanente.{% endblock %}
+{% block content %}
+        <section class="page-header">
+            <div class="page-header__bg"></div>
+            <!-- /.page-header__bg -->
+            <div class="container">
+                <h2 class="page-header__title">Nosotros</h2>
+                <ul class="kidearn-breadcrumb list-unstyled">
+                    <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+                    <li><span>Nosotros</span></li>
+                </ul><!-- /.thm-breadcrumb list-unstyled -->
+            </div><!-- /.container -->
+        </section><!-- /.page-header -->
+        <section class="about-four">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6 wow fadeInLeft" data-wow-delay="300ms">
+                        <div class="about-four__image">
+                            <div class="about-four__image__shape1">
+                                <img src="/static/images/shapes/about-4-shape-1.png" alt="Fundación Beit Shalom" />
+                            </div>
+                            <div class="about-four__image__one kidearn-tilt" data-tilt-options='{ "glare": false, "maxGlare": 0, "maxTilt": 3, "speed": 700, "scale": 1 }'>
+                                <img src="/static/images/beit-shalom/about-4-1.jpg" alt="Fundación Beit Shalom" />
+                                <div class="about-four__image__one-bottom"></div>
+                            </div>
+                            <div class="about-four__image__two wow fadeInUp" data-wow-delay="500ms">
+                                <img src="/static/images/beit-shalom/about-4-2.jpg" alt="Fundación Beit Shalom" />
+                            </div>
+                            <div class="about-four__image__bg-shape">
+                                <img src="/static/images/shapes/about-4-shape-2.png" alt="Fundación Beit Shalom" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 wow fadeInRight" data-wow-delay="200ms">
+                        <div class="about-four__content">
+                            <div class="sec-title text-left">
+
+                                <h6 class="sec-title__tagline">Quiénes somos</h6><!-- /.sec-title__tagline -->
+
+                                <h3 class="sec-title__title">Casa de paz para<br> la niñez</h3><!-- /.sec-title__title -->
+                            </div><!-- /.sec-title -->
+                            <p class="about-four__content__text">Somos una fundación sin ánimo de lucro que trabaja por la formación de niños y niñas de comunidades vulnerables, ayudándolos a descubrir y potenciar sus talentos para alcanzar metas de superación.</p>
+                            <div class="about-four__info" style="--accent-color: #F25334;">
+                                <div class="about-four__info__icon"><span class="icon-graduated"></span></div>
+                                <h3 class="about-four__info__title">Nuestra misión</h3>
+                                <p class="about-four__info__text">Somos una fundación sin ánimo de lucro que trabaja por la formación de niños y niñas de comunidades vulnerables, ayudándolos a descubrir y potenciar sus talentos para alcanzar metas de superación.</p>
+                            </div>
+                            <div class="about-four__info" style="--accent-color: #2390FF;">
+                                <div class="about-four__info__icon"><span class="icon-rating"></span></div>
+                                <h3 class="about-four__info__title">Nuestra visión</h3>
+                                <p class="about-four__info__text">Ser una fundación reconocida por generar oportunidades a niños y niñas de comunidades vulnerables para desarrollar sus talentos, sensibilizándolos para ponerlos al servicio de la sociedad con responsabilidad, criterio y compromiso con su entorno.</p>
+                            </div>
+                            <a href="{{ url_for('sitio.nosotros') }}" class="kidearn-btn">
+                                <span>Escríbenos</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bs-objetivos">
+<div class="container">
+<div class="sec-title text-center">
+<h6 class="sec-title__tagline">Fines y objetivos</h6>
+<h3 class="sec-title__title">Lo que nos mueve<br> cada día</h3>
+</div>
+<p class="bs-fines text-center">La Fundación International Beit Shalom, El Remanente, persigue fines de beneficencia, el mejoramiento de la calidad de vida y el bienestar común, atendiendo las necesidades de niños y niñas para ayudarles a descubrir sus talentos y potenciarlos, colaborando con los padres de familia en su formación.</p>
+<div class="row gutter-y-30">
+<div class="col-md-6 col-lg-4"><div class="bs-card" style="--accent-color:#F25334"><span class="bs-card__n">1</span><h4>Espacios para crecer</h4><p>Brindar espacios para el normal desarrollo psicosocial, con atención personalizada y refuerzo de la formación intelectual, humana, cultural y religiosa.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="bs-card" style="--accent-color:#26A6A1"><span class="bs-card__n">2</span><h4>Refuerzo semanal</h4><p>Reforzar y complementar cada semana lo aprendido en el colegio y en la iglesia, manteniendo el interés de los niños y niñas.</p></div></div>
+<div class="col-md-6 col-lg-4"><div class="bs-card" style="--accent-color:#2390FF"><span class="bs-card__n">3</span><h4>Fe cristiana</h4><p>Instruir con una sólida doctrina en la fe cristiana, para la lectura comprensiva de la Palabra de Dios y el compromiso de justicia social.</p></div></div>
+<div class="col-md-6 col-lg-6"><div class="bs-card" style="--accent-color:#FFAA23"><span class="bs-card__n">4</span><h4>Valores fundamentales</h4><p>Formar en honestidad, espiritualidad, respeto, responsabilidad, disciplina, libertad, servicio, solidaridad, perseverancia, gratitud, generosidad, fraternidad y alegría.</p></div></div>
+<div class="col-md-12 col-lg-6"><div class="bs-card" style="--accent-color:#75C137"><span class="bs-card__n">5</span><h4>Cultura y talentos</h4><p>Desarrollar el aprecio y el conocimiento de la cultura propia y foránea, y fortalecer las habilidades y talentos de cada niño y niña.</p></div></div>
+</div>
+</div>
+</section>
+<section class="cta-one cta-one--about-page">
+            <div class="container">
+                <div class="cta-one__inner">
+                    <div class="cta-one__shape1 kidearn-splax" data-para-options='{"orientation": "right", "scale": 1.5, "delay": ".4", "transition": "cubic-bezier(0,0,0,1)", "overflow": true
+        		}'>
+                        <img src="/static/images/shapes/cta-shape-1.png" alt="Fundación Beit Shalom" />
+                    </div>
+                    <div class="cta-one__shape2 kidearn-splax" data-para-options='{"orientation": "down", "scale": 1.5, "delay": ".4", "transition": "cubic-bezier(0,0,0,1)", "overflow": true
+        		}'>
+                        <img src="/static/images/shapes/cta-shape-2.png" alt="Fundación Beit Shalom" />
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="100ms">
+                            <div class="cta-one__content">
+                                <h3 class="cta-one__title">¿Quieres ser parte de esta labor?</h3><!-- /.cta-one__title -->
+                                <a href="{{ url_for('sitio.contacto') }}" class="kidearn-btn"><span>Contáctanos</span></a>
+                            </div><!-- /.cta-one__content -->
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="cta-one__one wow fadeInUp" data-wow-delay="300ms">
+                                <img src="/static/images/beit-shalom/cta-1.jpg" alt="Fundación Beit Shalom" />
+                                <div class="cta-one__one__text">Casa de<br> paz</div>
+                            </div>
+                            <div class="cta-one__thumb">
+                                <div class="cta-one__thumb__two"><img src="/static/images/shapes/cta-2.png" alt="Fundación Beit Shalom" /></div>
+                            </div><!-- /.cta-one__thumb -->
+                        </div>
+                    </div>
+                </div><!-- /.cta-one__inner -->
+            </div><!-- /.container-fluid -->
+        </section><!-- /.cta-one -->
+        
+        
+        
+        <div class="client-carousel ">
+            <div class="container">
+                <h5 class="client-carousel__tilte"><span>2k + Brands Trust Us</span></h5><!-- section-title -->
+                <div class="client-carousel__one kidearn-owl__carousel owl-theme owl-carousel" data-owl-options='{
+            "items": 5,
+            "margin": 65,
+            "smartSpeed": 700,
+            "loop":true,
+            "autoplay": 6000,
+            "nav":false,
+            "dots":false,
+            "navText": ["<span class=\"fa fa-angle-left\"></span>","<span class=\"fa fa-angle-right\"></span>"],
+            "responsive":{
+                "0":{
+                    "items":1,
+                    "margin": 0
+                },
+                "360":{
+                    "items":2,
+                    "margin": 0
+                },
+                "575":{
+                    "items":3,
+                    "margin": 30
+                },
+                "768":{
+                    "items":3,
+                    "margin": 40
+                },
+                "992":{
+                    "items": 4,
+                    "margin": 40
+                },
+                "1200":{
+                    "items": 5
+                }
+            }
+            }'>
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                    <div class="client-carousel__one__item">
+                        <img src="/static/images/beit-shalom/brand-1-1.jpg" alt="Fundación Beit Shalom">
+                    </div><!-- /.owl-slide-item-->
+                </div><!-- /.thm-owl__slider -->
+            </div><!-- /.container -->
+        </div><!-- /.client-carousel -->
+        
+{% endblock %}

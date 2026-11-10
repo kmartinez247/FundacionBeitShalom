@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% block titulo %}Programas | Fundación Beit Shalom{% endblock %}
+{% block descripcion %}Programas de formación en valores, fe, refuerzo académico y talentos para niños y niñas.{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <!-- /.page-header__bg -->
+    <div class="container">
+        <h2 class="page-header__title">Programas</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Programas</span></li>
+        </ul><!-- /.thm-breadcrumb list-unstyled -->
+    </div><!-- /.container -->
+</section><!-- /.page-header -->
+
+<section class="program-page">
+	<div class="container">
+		<div class="row gutter-y-30">
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='00ms' style='--accent-color: #F25334;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-1.jpg" alt="Formación en valores">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-crawling-baby-silhouette"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Formación en valores</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Niños y niñas)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Honestidad, respeto, responsabilidad, servicio y solidaridad para crecer como personas íntegras.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='100ms' style='--accent-color: #75C137;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-2.jpg" alt="Formación espiritual">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-playtime"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Formación espiritual</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Niños y niñas)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Sólida doctrina en la fe cristiana y lectura comprensiva de la Palabra de Dios.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='200ms' style='--accent-color: #2390FF;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-3.jpg" alt="Refuerzo académico">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-fun"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Refuerzo académico</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Niños y niñas)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Intensificación académica semanal que complementa lo aprendido en el colegio.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='300ms' style='--accent-color: #FFAA23;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-4.jpg" alt="Talentos y cultura">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-charity"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Talentos y cultura</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Niños y niñas)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Actividades artísticas y culturales para descubrir y potenciar los talentos de cada niño.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='400ms' style='--accent-color: #26A6A1;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-5.jpg" alt="Actividades lúdicas">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-art-studies"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Actividades lúdicas</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Niños y niñas)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Espacios de juego y convivencia para el normal desarrollo psicosocial de la niñez.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+			<div class="col-lg-4 col-md-6">
+				<div class="program-three__item wow fadeInUp" data-wow-duration='1500ms' data-wow-delay='500ms' style='--accent-color: #5F7999;'>
+    <div class="program-three__item__image">
+        <img src="/static/images/beit-shalom/program-3-6.jpg" alt="Familia y comunidad">
+    </div><!-- /.program-one__item__image -->
+    <div class="program-three__item__content">
+        <div class="program-three__item__icon">
+            <span class="icon-discipline"></span>
+        </div><!-- /.program-three__item__icon -->
+        <h3 class="program-three__item__title"><a href="{{ url_for('sitio.programas') }}">Familia y comunidad</a></h3><!-- /.program-three__item__title -->
+        <div class="program-three__item__age">(Padres e hijos)</div><!-- /.program-three__item__age -->
+        <p class="program-three__item__text">Interacción con los padres de familia para acompañar la formación de sus hijos.</p><!-- /.program-three__item__text -->
+        <a class="program-three__item__rm" href="{{ url_for('sitio.programas') }}"><span class="icon-right-arrow"></span></a><!-- /.program-three__item__text -->
+    </div><!-- /.program-three__item__content -->
+</div><!-- /.program-three__item__one -->
+			</div><!-- /.program-item -->
+		</div>
+	</div>
+</section><!-- /.programs-page -->
+{% endblock %}

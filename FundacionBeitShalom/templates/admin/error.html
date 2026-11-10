@@ -1,0 +1,9 @@
+{% extends "admin/base_admin.html" %}
+{% block titulo %}Sin conexión{% endblock %}
+{% block content %}
+<section class="login">
+    <h1>No se pudo conectar con la base de datos</h1>
+    <p>Revisa que SQL Server esté encendido y que los datos del archivo .env sean correctos.</p>
+    <a class="btn btn-principal" href="{{ url_for('admin.dashboard') }}">Intentar de nuevo</a>
+</section>
+{% endblock %}

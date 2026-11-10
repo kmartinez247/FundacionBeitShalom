@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block titulo %}{{ titulo }} | Fundación Beit Shalom{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="container">
+        <h2 class="page-header__title">{{ titulo }}</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Error {{ codigo }}</span></li>
+        </ul>
+    </div>
+</section>
+<section class="colab-section">
+    <div class="container">
+        <div class="colab-card colab-mensaje">
+            <h3 class="colab-card__title">{{ titulo }}</h3>
+            <p>{{ mensaje }}</p>
+            <a class="kidearn-btn" href="{{ url_for('sitio.inicio') }}"><span>Ir al inicio</span></a>
+        </div>
+    </div>
+</section>
+{% endblock %}

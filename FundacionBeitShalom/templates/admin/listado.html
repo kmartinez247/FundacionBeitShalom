@@ -1,0 +1,83 @@
+{% extends "admin/base_admin.html" %}
+{% from "admin/_macros.html" import badge %}
+{% block titulo %}Colaboradores{% endblock %}
+{% block content %}
+<h1>Colaboradores</h1>
+
+<form method="get" action="{{ url_for('admin.listado') }}" class="filtros">
+    <div>
+        <label for="q">Buscar por nombre o correo</label>
+        <input type="search" id="q" name="q" value="{{ filtros.q }}" maxlength="100">
+    </div>
+    <div>
+        <label for="pais">País</label>
+        <select id="pais" name="pais">
+            <option value="">Todos</option>
+            {% for p in paises %}
+            <option value="{{ p }}" {% if filtros.pais == p %}selected{% endif %}>{{ p }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="area">Área de colaboración</label>
+        <select id="area" name="area">
+            <option value="">Todas</option>
+            {% for a in areas %}
+            <option value="{{ a.id }}" {% if filtros.area == a.id %}selected{% endif %}>{{ a.nombre }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div>
+        <label for="estado">Estado</label>
+        <select id="estado" name="estado">
+            <option value="">Todos</option>
+            {% for e in estados %}
+            <option value="{{ e }}" {% if filtros.estado == e %}selected{% endif %}>{{ e }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <div class="botones">
+        <button type="submit" class="btn btn-principal">Filtrar</button>
+        <a class="btn" href="{{ url_for('admin.listado') }}">Limpiar</a>
+    </div>
+</form>
+
+<p class="resumen-lista">
+    {{ total }} {{ 'solicitud' if total == 1 else 'solicitudes' }}
+    {% if total %}· <a href="{{ url_for('admin.exportar', **parametros) }}">Exportar estos resultados a Excel</a>{% endif %}
+</p>
+
+{% if filas %}
+<div class="tabla-scroll">
+    <table>
+        <thead>
+            <tr><th>Nombre</th><th>País</th><th>Correo</th><th>Áreas</th><th>Modalidad</th><th>Estado</th><th>Fecha</th><th></th></tr>
+        </thead>
+        <tbody>
+            {% for f in filas %}
+            <tr>
+                <td>{{ f.nombre_completo }}</td>
+                <td>{{ f.pais }}</td>
+                <td>{{ f.correo }}</td>
+                <td>{{ f.areas | join(', ') }}</td>
+                <td>{{ f.modalidad }}</td>
+                <td>{{ badge(f.estado) }}</td>
+                <td>{{ f.fecha_registro.strftime('%d/%m/%Y') }}</td>
+                <td><a href="{{ url_for('admin.detalle', colaborador_id=f.id) }}">Ver</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% if total_paginas > 1 %}
+<nav class="paginas" aria-label="Páginas">
+    {% if pagina > 1 %}<a class="btn" href="{{ url_for('admin.listado', pagina=pagina - 1, **parametros) }}">Anterior</a>{% endif %}
+    <span>Página {{ pagina }} de {{ total_paginas }}</span>
+    {% if pagina < total_paginas %}<a class="btn" href="{{ url_for('admin.listado', pagina=pagina + 1, **parametros) }}">Siguiente</a>{% endif %}
+</nav>
+{% endif %}
+{% else %}
+<p class="vacio">No hay solicitudes con esos filtros. Prueba quitando alguno.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,71 @@
+/* ==========================================================
+   Formulario de colaboradores y páginas de apoyo.
+   Se carga DESPUÉS de kidearn.css y beit-shalom.css, así que
+   usa los mismos colores (variables --kidearn-*).
+   ========================================================== */
+.colab-section { padding: 90px 0 100px; background: var(--kidearn-gray); }
+.colab-intro { max-width: 640px; margin: 0 auto 30px; }
+.colab-form { max-width: 860px; margin: 0 auto; }
+
+.colab-card {
+  background: #fff; border-radius: 24px; padding: 30px 32px; margin-bottom: 24px;
+  border-bottom: 5px solid var(--kidearn-primary);
+  box-shadow: 0 10px 30px rgba(11, 32, 56, .07);
+}
+.colab-card__title {
+  font-family: var(--kidearn-heading-font); font-size: 22px;
+  color: var(--kidearn-black); margin: 0 0 18px;
+}
+.colab-card p { margin-bottom: 16px; }
+.colab-mensaje { max-width: 760px; margin: 0 auto; text-align: center; }
+
+.colab-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 20px; }
+.colab-grid .completo { grid-column: 1 / -1; }
+.colab-label { display: block; margin: 0 0 6px; font-weight: 700; font-size: 15px; color: var(--kidearn-black); }
+.colab-input {
+  width: 100%; padding: 13px 16px; font-size: 16px; color: var(--kidearn-black);
+  background: #fff; border: 1px solid var(--kidearn-border-color); border-radius: 14px;
+}
+.colab-input:focus {
+  outline: none; border-color: var(--kidearn-base);
+  box-shadow: 0 0 0 3px rgba(var(--kidearn-base-rgb), .18);
+}
+.colab-input:user-invalid { border-color: #c0392b; }
+.colab-input:user-valid { border-color: #2e8b57; }
+textarea.colab-input { resize: vertical; }
+
+.colab-opciones { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.colab-check { display: flex; align-items: flex-start; gap: 10px; margin: 0; font-weight: 400; cursor: pointer; }
+.colab-check input { width: 18px; height: 18px; flex-shrink: 0; margin-top: 3px; accent-color: var(--kidearn-base); }
+.colab-check a { color: var(--kidearn-base); text-decoration: underline; }
+
+.colab-error { min-height: 1em; margin: 10px 0 0; font-size: 14px; color: #c0392b; }
+.colab-alerta {
+  max-width: 860px; margin: 0 auto 20px; padding: 12px 18px; border-radius: 14px;
+  background: #fdecea; border: 1px solid #e6b8b2; color: #8f2a1f;
+}
+.colab-enviar { text-align: center; margin-top: 10px; }
+.colab-enviar .btn-enviar:disabled { opacity: .6; cursor: wait; }
+
+/* Llamado a colaborar en la página de inicio */
+.colab-cta { padding: 70px 0; background: var(--kidearn-gray); }
+.colab-cta__inner {
+  display: flex; align-items: center; justify-content: space-between; gap: 30px; flex-wrap: wrap;
+  background: #fff; border-radius: 30px; padding: 36px 44px;
+  box-shadow: 0 10px 30px rgba(11, 32, 56, .08);
+}
+.colab-cta__title { margin: 0 0 8px; font-family: var(--kidearn-heading-font); font-size: 28px; color: var(--kidearn-black); }
+.colab-cta__text { margin: 0; }
+
+@media (max-width: 700px) {
+  .colab-grid, .colab-opciones { grid-template-columns: 1fr; }
+  .colab-card { padding: 22px 18px; }
+  .colab-cta__inner { padding: 28px 22px; }
+}
+
+/* El menú ahora tiene un enlace más ("Colaborar"): se compacta para que quepa */
+.main-header__call__number { white-space: nowrap; }
+@media (min-width: 1200px) and (max-width: 1499px) {
+  .main-header__call__text { display: none; }
+  .main-menu .main-menu__list > li + li { margin-left: 22px; }
+}

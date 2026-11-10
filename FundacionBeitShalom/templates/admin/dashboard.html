@@ -1,0 +1,77 @@
+{% extends "admin/base_admin.html" %}
+{% from "admin/_macros.html" import badge %}
+{% block titulo %}Resumen{% endblock %}
+{% block content %}
+<h1>Resumen de solicitudes</h1>
+
+<section class="tarjetas">
+    <div class="tarjeta">
+        <span class="numero">{{ stats.total }}</span>
+        <span>Total de solicitudes</span>
+    </div>
+    {% for estado, total in stats.por_estado.items() %}
+    <a class="tarjeta" href="{{ url_for('admin.listado', estado=estado) }}">
+        <span class="numero">{{ total }}</span>
+        {{ badge(estado) }}
+    </a>
+    {% endfor %}
+</section>
+
+<div class="dos-columnas">
+    <section class="bloque">
+        <h2>Áreas de colaboración elegidas</h2>
+        {% set maximo = (stats.por_area | map(attribute='total') | max) or 1 %}
+        <ul class="barras">
+            {% for a in stats.por_area %}
+            <li>
+                <span class="etiqueta">{{ a.nombre }}</span>
+                <span class="barra"><span style="width: {{ (a.total / maximo * 100) | round | int }}%"></span></span>
+                <span class="valor">{{ a.total }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+    </section>
+
+    <section class="bloque">
+        <h2>Países con más solicitudes</h2>
+        {% if stats.por_pais %}
+        {% set maximo_p = (stats.por_pais | map(attribute='total') | max) or 1 %}
+        <ul class="barras">
+            {% for p in stats.por_pais %}
+            <li>
+                <span class="etiqueta">{{ p.pais }}</span>
+                <span class="barra"><span style="width: {{ (p.total / maximo_p * 100) | round | int }}%"></span></span>
+                <span class="valor">{{ p.total }}</span>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p class="vacio">Todavía no hay solicitudes.</p>
+        {% endif %}
+    </section>
+</div>
+
+<section class="bloque">
+    <h2>Últimas solicitudes</h2>
+    {% if stats.recientes %}
+    <div class="tabla-scroll">
+        <table>
+            <thead><tr><th>Nombre</th><th>País</th><th>Estado</th><th>Fecha</th><th></th></tr></thead>
+            <tbody>
+                {% for r in stats.recientes %}
+                <tr>
+                    <td>{{ r.nombre_completo }}</td>
+                    <td>{{ r.pais }}</td>
+                    <td>{{ badge(r.estado) }}</td>
+                    <td>{{ r.fecha_registro.strftime('%d/%m/%Y %H:%M') }}</td>
+                    <td><a href="{{ url_for('admin.detalle', colaborador_id=r.id) }}">Ver</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p class="vacio">Cuando alguien envíe el formulario, aparecerá aquí.</p>
+    {% endif %}
+</section>
+{% endblock %}

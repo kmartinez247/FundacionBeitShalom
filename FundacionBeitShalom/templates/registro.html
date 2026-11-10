@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% block titulo %}Quiero colaborar | Fundación Beit Shalom{% endblock %}
+{% block content %}
+<section class="page-header">
+    <div class="page-header__bg"></div>
+    <div class="container">
+        <h2 class="page-header__title">Quiero colaborar</h2>
+        <ul class="kidearn-breadcrumb list-unstyled">
+            <li><a href="{{ url_for('sitio.inicio') }}">Inicio</a></li>
+            <li><span>Quiero colaborar</span></li>
+        </ul>
+    </div>
+</section>
+
+<section class="colab-section">
+    <div class="container">
+        <div class="sec-title text-center">
+            <h6 class="sec-title__tagline">Programa de colaboradores</h6>
+            <h3 class="sec-title__title">¡Queremos conocerte!</h3>
+        </div>
+        <p class="colab-intro text-center">Tu disposición para ayudar puede marcar una diferencia en la vida de un niño.
+            Registra tus datos y cuéntanos cómo te gustaría colaborar.</p>
+
+        {% include "_mensajes.html" %}
+
+        <form id="formRegistro" class="colab-form" method="POST" action="{{ url_for('colaborador.registrar') }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+            <div class="colab-card">
+                <h3 class="colab-card__title">01. Información personal</h3>
+                <div class="colab-grid">
+                    <div class="completo">
+                        <label class="colab-label" for="nombre">Nombre completo</label>
+                        <input class="colab-input" type="text" id="nombre" name="nombre" required
+                               minlength="5" maxlength="150" placeholder="Tu nombre completo">
+                    </div>
+                    <div>
+                        <label class="colab-label" for="pais">País de residencia</label>
+                        <select class="colab-input" id="pais" name="pais" required>
+                            <option value="">Seleccionar país</option>
+                            {% for pais in paises %}
+                            <option value="{{ pais }}">{{ pais }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="colab-label" for="telefono">Teléfono / WhatsApp</label>
+                        <input class="colab-input" type="tel" id="telefono" name="telefono"
+                               maxlength="30" placeholder="Número de contacto">
+                    </div>
+                    <div class="completo">
+                        <label class="colab-label" for="correo">Correo electrónico</label>
+                        <input class="colab-input" type="email" id="correo" name="correo" required
+                               maxlength="150" placeholder="correo@ejemplo.com">
+                    </div>
+                </div>
+            </div>
+
+            <div class="colab-card">
+                <h3 class="colab-card__title">02. ¿Cómo deseas colaborar?</h3>
+                <div class="colab-opciones">
+                    {% for area in areas %}
+                    <label class="colab-check">
+                        <input type="checkbox" name="areas" value="{{ area.id }}">
+                        <span>{{ area.nombre }}</span>
+                    </label>
+                    {% endfor %}
+                </div>
+                <p id="errorAreas" class="colab-error"></p>
+            </div>
+
+            <div class="colab-card">
+                <h3 class="colab-card__title">03. Disponibilidad</h3>
+                <div class="colab-grid">
+                    <div>
+                        <label class="colab-label" for="modalidad">Modalidad de colaboración</label>
+                        <select class="colab-input" id="modalidad" name="modalidad" required>
+                            <option value="">Seleccionar modalidad</option>
+                            {% for m in modalidades %}
+                            <option value="{{ m }}">{{ m }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label class="colab-label" for="disponibilidad">Disponibilidad</label>
+                        <select class="colab-input" id="disponibilidad" name="disponibilidad" required>
+                            <option value="">Seleccionar disponibilidad</option>
+                            {% for d in disponibilidades %}
+                            <option value="{{ d }}">{{ d }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="completo">
+                        <label class="colab-label" for="motivacion">¿Por qué deseas colaborar?</label>
+                        <textarea class="colab-input" id="motivacion" name="motivacion" maxlength="1000" rows="5"
+                                  placeholder="Cuéntanos un poco sobre tu motivación..."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colab-card">
+                <h3 class="colab-card__title">04. Confirmación</h3>
+                <label class="colab-check">
+                    <input type="checkbox" id="privacidad" name="privacidad" value="1" required>
+                    <span>Acepto el tratamiento de mis datos personales conforme a la
+                        <a href="{{ url_for('colaborador.privacidad') }}" target="_blank" rel="noopener">política de privacidad</a>.</span>
+                </label>
+            </div>
+
+            <div class="colab-enviar">
+                <button type="submit" class="kidearn-btn kidearn-btn--xl btn-enviar"><span>Enviar solicitud de registro</span></button>
+            </div>
+        </form>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/validaciones.js') }}" defer></script>
+{% endblock %}
